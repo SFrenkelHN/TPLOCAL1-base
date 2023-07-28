@@ -1,0 +1,61 @@
+﻿@model List<TPLOCAL1.Models.Opinion>
+
+<! DOCTYPE html>
+<html>
+<head>
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="~/resources/Index.css" />
+</head>
+
+<body>
+    <header>
+        <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" />
+        <h1>Liste des avis</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/Home/Index/Index">Accueil</a></li>
+            <li><a href="/Home/Index/Formulaire">Formulaire</a></li>
+        </ul>
+    </nav>
+
+    <section>
+
+<table>
+    <caption>Liste</caption>
+    <tr>
+        <td>Nom</td>
+        <td>Prénom</td>
+        <td>Avis donné</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(m => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(m => item.FirstName)
+            </td>
+
+            @{
+                var color = "red";
+                var txtcolor = "black";
+                if (item.OpinionGiven == "O")
+                {
+                    color = "green";
+                    txtcolor = "white";
+                }
+            }
+            <td style="background-color: @color; color: @txtcolor">
+                @Html.DisplayFor(m => item.OpinionGiven)
+            </td>
+        </tr>
+    }
+</table>
+
+
+    </section>
+</body>
+</html>

@@ -34,9 +34,9 @@ namespace TPLOCAL1.Models
             foreach (XmlNode node in xmlDoc.SelectNodes("root/row"))
             {
                 // Retrieving data from child nodes.
-                string LastName = node["LastName"].InnerText;
-                string FirstName = node["FirstName"].InnerText;
-                string OpinionGiven = node["OpinionGiven"].InnerText;
+                string LastName = node["Nom"].InnerText;
+                string FirstName = node["Prenom"].InnerText;
+                string OpinionGiven = node["Avis"].InnerText;
 
                 // Creating the "Opinion" object to add to the results list.
                 Opinion opinion = new Opinion

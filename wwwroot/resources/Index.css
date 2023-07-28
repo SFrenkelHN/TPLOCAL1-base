@@ -1,0 +1,43 @@
+﻿.image {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+body {
+
+}
+
+h1 {
+    margin-right: 170px;
+    margin-left: 170px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+nav {
+    float: left;
+    width: 150px;
+    border: 2px solid #8C014C;
+    background-color: #8c014c;
+    color: white;
+}
+
+li {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+a {
+    color: chocolate;
+}
+
+section {
+    margin-left: 170px;
+}
